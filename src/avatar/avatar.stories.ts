@@ -15,10 +15,6 @@ interface Story<T> {
 
 interface ArgTypes {}
 
-const Template: Story<ArgTypes> = ({}: ArgTypes) => html`
-  <tap-avatar> </tap-avatar>
-`;
-
-export const Avatar = Template.bind({});
+export const Avatar: Story<ArgTypes> = () => html` <tap-avatar> </tap-avatar> `;
 
 Avatar.args = {};

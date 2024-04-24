@@ -1,5 +1,5 @@
-import { LitElement, html } from 'lit';
-import { property, queryAll } from 'lit/decorators.js';
+import { html, LitElement } from 'lit';
+import { property } from 'lit/decorators.js';
 import { range } from 'lit/directives/range.js';
 import { map } from 'lit/directives/map.js';
 import { classMap } from 'lit/directives/class-map.js';

@@ -39,7 +39,7 @@ export class Button extends LitElement {
     this.internals = this.attachInternals();
   }
 
-  private handleClick() {
+  private handleClick = () => {
     if (this.type === 'reset') {
       return this.internals.form?.reset();
     }
@@ -47,7 +47,7 @@ export class Button extends LitElement {
     if (this.type === 'submit') {
       return this.internals.form?.requestSubmit();
     }
-  }
+  };
 
   render() {
     return html`

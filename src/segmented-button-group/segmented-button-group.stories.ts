@@ -16,7 +16,7 @@ interface Story<T> {
 
 interface ArgTypes {}
 
-const Template: Story<ArgTypes> = ({}: ArgTypes) => html`
+const Template: Story<ArgTypes> = () => html`
   <tap-segmented-button-group>
     <tap-segmented-button>عنوان</tap-segmented-button>
     <tap-segmented-button>عنوان</tap-segmented-button>

@@ -5,14 +5,14 @@ export class SegmentedButton extends LitElement {
   @property({ type: Boolean, reflect: true }) selected = false;
   @property({ type: Boolean }) disabled = false;
 
-  private handleClick() {
+  private handleClick = () => {
     this.dispatchEvent(
       new Event('segmented-button-click', {
         bubbles: true,
         composed: true,
       })
     );
-  }
+  };
 
   render() {
     return html`

@@ -15,9 +15,7 @@ interface Story<T> {
 
 interface ArgTypes {}
 
-const Template: Story<ArgTypes> = ({}: ArgTypes) => html`
-  <tap-checkbox></tap-checkbox>
-`;
+const Template: Story<ArgTypes> = () => html` <tap-checkbox></tap-checkbox> `;
 
 export const Checkbox = Template.bind({});
 

@@ -31,7 +31,7 @@ export class Modal extends LitElement implements HTMLDialogElement {
     this.addEventListener('click', this.handleClick);
   }
 
-  protected updated(changed: PropertyValues): void {
+  protected updated(changed: PropertyValues<Modal>): void {
     const oldValue = changed.get('open');
     const newValue = this.open;
     const openChanged = oldValue !== undefined && oldValue !== newValue;
@@ -59,7 +59,7 @@ export class Modal extends LitElement implements HTMLDialogElement {
     }
   }
 
-  private handleClick(event: MouseEvent) {
+  private handleClick = (event: MouseEvent) => {
     const { open, overlay, dialog } = this;
     if (open) {
       const path = event.composedPath();
@@ -69,14 +69,14 @@ export class Modal extends LitElement implements HTMLDialogElement {
         this.close();
       }
     }
-  }
+  };
 
-  private handleKeydown(event: KeyboardEvent) {
+  private handleKeydown = (event: KeyboardEvent) => {
     // TODO: handle `Tab`, `Shift + Tab`.
     if (['Escape', 'Esc'].includes(event.key)) {
       this.close();
     }
-  }
+  };
 
   close(returnValue?: string): void {
     if (returnValue) {

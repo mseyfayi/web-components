@@ -15,7 +15,7 @@ export class SegmentedButtonGroup extends LitElement {
     );
   }
 
-  private handleSlotChange() {
+  private handleSlotChange = () => {
     const selected = this.buttons.find((button) => button.selected);
 
     if (!selected) {
@@ -25,9 +25,9 @@ export class SegmentedButtonGroup extends LitElement {
         button.selected = true;
       }
     }
-  }
+  };
 
-  private handleSegmentedButtonClick(e: Event) {
+  private handleSegmentedButtonClick = (e: Event) => {
     const index = this.buttons.indexOf(e.target as SegmentedButton);
     const clicked = this.buttons[index];
 
@@ -51,7 +51,7 @@ export class SegmentedButtonGroup extends LitElement {
         composed: true,
       })
     );
-  }
+  };
 
   render() {
     return html`

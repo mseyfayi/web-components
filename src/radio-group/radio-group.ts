@@ -14,16 +14,16 @@ export class RadioGroup extends LitElement {
     this.addEventListener('radio-input-change', this.handleRadioChangeClick);
   }
 
-  private selectDefaultOption() {
+  private selectDefaultOption = () => {
     if (!this.value) return;
     const selectedRadio = this.radios.find(
       (radio) => radio.value == this.value
     );
     if (!selectedRadio) return;
     selectedRadio.checked = true;
-  }
+  };
 
-  private handleRadioChangeClick(e: Event) {
+  private handleRadioChangeClick = (e: Event) => {
     const index = this.radios.indexOf(e.target as Radio);
     const selectedRadio = this.radios[index];
 
@@ -48,7 +48,7 @@ export class RadioGroup extends LitElement {
         composed: true,
       })
     );
-  }
+  };
 
   render() {
     return html`

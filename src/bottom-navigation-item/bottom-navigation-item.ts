@@ -4,14 +4,14 @@ import { property } from 'lit/decorators.js';
 export class BottomNavigationItem extends LitElement {
   @property({ type: Boolean, reflect: true }) active = false;
 
-  private handleClick() {
+  private handleClick = () => {
     this.dispatchEvent(
       new Event('bottom-navigation-item-click', {
         bubbles: true,
         composed: true,
       })
     );
-  }
+  };
 
   render() {
     return html` <button

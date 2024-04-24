@@ -31,11 +31,11 @@ export class Checkbox extends LitElement {
     return this.internals.labels;
   }
 
-  private handleInput(event: Event) {
+  private handleInput = (event: Event) => {
     const target = event.target as HTMLInputElement;
     this.checked = target.checked;
     this.indeterminate = target.indeterminate;
-  }
+  };
 
   protected updated(changed: PropertyValues) {
     if (changed.has('checked')) {

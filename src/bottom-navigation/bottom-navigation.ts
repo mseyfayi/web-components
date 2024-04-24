@@ -17,7 +17,7 @@ export class BottomNavigation extends LitElement {
     return this.items[0];
   }
 
-  private handleBottomNavigationItemClick(e: Event) {
+  private handleBottomNavigationItemClick = (e: Event) => {
     const clicked = this.items.find((item) => item === e.target);
 
     if (!clicked || clicked.active) return;
@@ -29,15 +29,15 @@ export class BottomNavigation extends LitElement {
         item.active = false;
       }
     });
-  }
+  };
 
-  private handleSlotChange() {
+  private handleSlotChange = () => {
     const active = this.items.find((item) => item.active);
 
     if (!active && this.firstItem) {
       this.firstItem.active = true;
     }
-  }
+  };
 
   render() {
     return html`

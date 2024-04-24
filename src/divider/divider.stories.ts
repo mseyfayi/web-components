@@ -15,7 +15,7 @@ interface Story<T> {
 
 interface ArgTypes {}
 
-const Template: Story<ArgTypes> = ({}: ArgTypes) => html`
+const Template: Story<ArgTypes> = () => html`
   <tap-divider type="thin"> </tap-divider>
   <tap-divider> </tap-divider>
   <tap-divider type="bold"> </tap-divider>
