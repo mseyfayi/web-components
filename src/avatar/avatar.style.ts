@@ -1,4 +1,4 @@
-import { css } from "lit";
+import { css } from 'lit';
 
 export default css`
   :host {
@@ -30,34 +30,34 @@ export default css`
     border-radius: inherit;
   }
 
-  .avatar[size="xxSmall"] {
+  .avatar[size='xxSmall'] {
     width: var(--tap-sys-spacing-8);
     height: var(--tap-sys-spacing-8);
   }
 
-  .avatar[size="xSmall"] {
+  .avatar[size='xSmall'] {
     width: var(--tap-sys-spacing-9);
     height: var(--tap-sys-spacing-9);
   }
 
-  .avatar[size="small"] {
+  .avatar[size='small'] {
     width: var(--tap-sys-spacing-10);
     height: var(--tap-sys-spacing-10);
   }
 
-  .avatar[size="medium"] {
+  .avatar[size='medium'] {
     width: var(--tap-sys-spacing-11);
     height: var(--tap-sys-spacing-11);
   }
 
   // TODO: add to tokens
-  .avatar[size="large"] {
+  .avatar[size='large'] {
     width: 56px;
     height: 56px;
   }
 
   // TODO: add to tokens
-  .avatar[size="xLarge"] {
+  .avatar[size='xLarge'] {
     width: 72px;
     height: 72px;
   }

@@ -1,7 +1,7 @@
-import { LitElement, PropertyValues, html, nothing } from "lit";
-import { property } from "lit/decorators.js";
-import { ifDefined } from "lit/directives/if-defined.js";
-import { live } from "lit/directives/live.js";
+import { LitElement, PropertyValues, html, nothing } from 'lit';
+import { property } from 'lit/decorators.js';
+import { ifDefined } from 'lit/directives/if-defined.js';
+import { live } from 'lit/directives/live.js';
 
 export class TextField extends LitElement {
   static override shadowRootOptions: ShadowRootInit = {
@@ -12,7 +12,7 @@ export class TextField extends LitElement {
   static readonly formAssociated = true;
 
   @property({ type: String })
-  value = "";
+  value = '';
 
   @property({ type: Boolean })
   disabled = false;
@@ -35,36 +35,20 @@ export class TextField extends LitElement {
 
   private internals: ElementInternals;
 
-  get form() {
-    return this.internals.form;
-  }
-
-  get labels() {
-    return this.internals.labels;
-  }
-
   constructor() {
     super();
     this.internals = this.attachInternals();
   }
 
-  protected updated(changed: PropertyValues) {
-    if (changed.has("value")) {
+  protected updated = (changed: PropertyValues) => {
+    if (changed.has('value')) {
       this.internals.setFormValue(this.value);
     }
-  }
+  };
 
-  formDisabledCallback(disabled: boolean) {
-    this.disabled = disabled;
-  }
-
-  formResetCallback() {
-    this.value = "";
-  }
-
-  private handleInput(event: InputEvent) {
+  private handleInput = (event: InputEvent) => {
     this.value = (event.target as HTMLInputElement).value;
-  }
+  };
 
   // TODO: check if using generic ids for caption and input is ok
   render() {
@@ -73,7 +57,7 @@ export class TextField extends LitElement {
         <label part="label" class="label" for="input" ?hidden=${!this.label}
           >${this.label ?? nothing}</label
         >
-        <div  part="container" class="container">
+        <div part="container" class="container">
           <slot name="leading"></slot>
           <input
             id="input"
@@ -82,18 +66,22 @@ export class TextField extends LitElement {
             aria-describedby="caption"
             aria-invalid=${this.error}
             aria-label=${ifDefined(this.label)}
-            aria-disabled=${this.disabled ? "true" : "false"}
+            aria-disabled=${this.disabled ? 'true' : 'false'}
             ?disabled=${this.disabled}
             inputmode=${ifDefined(this.inputmode)}
             placeholder=${ifDefined(this.placeholder)}
-            autocomplete=${ifDefined(this.autocomplete) as any}
-            type=${ifDefined(this.type) as any}
+            autocomplete=${ifDefined(this.autocomplete)}
+            type=${ifDefined(this.type)}
             .value=${live(this.value)}
             @input=${this.handleInput}
           />
           <slot name="trailing"></slot>
         </div>
-        <span part="caption" class="caption" id="caption" ?hidden=${!this.caption}
+        <span
+          part="caption"
+          class="caption"
+          id="caption"
+          ?hidden=${!this.caption}
           >${this.caption ?? nothing}</span
         >
       </div>

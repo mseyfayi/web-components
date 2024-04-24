@@ -1,42 +1,49 @@
-import {html, TemplateResult} from "lit";
-import "./index.js";
+import { html, TemplateResult } from 'lit';
+import './index.js';
 
-const buttonTypes: string[] = ["button", "submit", "reset"];
-const buttonSizes: string[] = ["small", "medium", "large"];
-const buttonVariants: string[] = ["primary", "ghost", "naked", "elevated", "destructive", "brand"];
+const buttonTypes: string[] = ['button', 'submit', 'reset'];
+const buttonSizes: string[] = ['small', 'medium', 'large'];
+const buttonVariants: string[] = [
+  'primary',
+  'ghost',
+  'naked',
+  'elevated',
+  'destructive',
+  'brand',
+];
 
 export default {
-  title: "Button",
-  component: "tap-button",
+  title: 'Button',
+  component: 'tap-button',
   argTypes: {
     slot: {
-      description: "Button slot content",
-      control: {type: "text"},
+      description: 'Button slot content',
+      control: { type: 'text' },
     },
     disabled: {
-      description: "Is the button disabled?",
-      control: {type: "boolean"},
+      description: 'Is the button disabled?',
+      control: { type: 'boolean' },
       defaultValue: false,
     },
     type: {
-      description: "Button type",
+      description: 'Button type',
       options: buttonTypes,
-      control: {type: "inline-radio"},
+      control: { type: 'inline-radio' },
     },
     loading: {
-      description: "Is the button loading?",
-      control: {type: "boolean"},
+      description: 'Is the button loading?',
+      control: { type: 'boolean' },
       defaultValue: false,
     },
     size: {
-      description: "Button size",
+      description: 'Button size',
       options: buttonSizes,
-      control: {type: "inline-radio"},
+      control: { type: 'inline-radio' },
     },
     variant: {
-      description: "Button variant",
+      description: 'Button variant',
       options: buttonVariants,
-      control: {type: "select"},
+      control: { type: 'select' },
     },
   },
 };
@@ -49,28 +56,22 @@ interface Story<T> {
 }
 
 interface ArgTypes {
-  slot: string,
-  disabled?: boolean,
-  loading?: boolean,
-  type?: "button" | "submit" | "reset",
-  size: "small" | "medium" | "large",
-  variant:
-    | "primary"
-    | "ghost"
-    | "naked"
-    | "elevated"
-    | "destructive"
-    | "brand",
+  slot: string;
+  disabled?: boolean;
+  loading?: boolean;
+  type?: 'button' | 'submit' | 'reset';
+  size: 'small' | 'medium' | 'large';
+  variant: 'primary' | 'ghost' | 'naked' | 'elevated' | 'destructive' | 'brand';
 }
 
 const Template: Story<ArgTypes> = ({
-   slot,
-   disabled,
-   loading,
-   type,
-   size,
-   variant,
- }: ArgTypes) => html`
+  slot,
+  disabled,
+  loading,
+  type,
+  size,
+  variant,
+}: ArgTypes) => html`
   <tap-button
     ?disabled=${disabled}
     ?loading=${loading}
@@ -91,5 +92,5 @@ Button.args = {
   loading: false,
   type: 'button',
   size: 'medium',
-  variant: 'brand'
+  variant: 'brand',
 };

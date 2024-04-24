@@ -1,9 +1,9 @@
-import { html, TemplateResult } from "lit";
-import "./index.js";
+import { html, TemplateResult } from 'lit';
+import './index.js';
 
 export default {
-  title: "Avatar",
-  component: "tap-avatar",
+  title: 'Avatar',
+  component: 'tap-avatar',
   argTypes: {},
 };
 

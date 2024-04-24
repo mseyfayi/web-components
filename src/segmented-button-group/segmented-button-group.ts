@@ -1,16 +1,16 @@
-import { LitElement, html, nothing } from "lit";
-import { property, queryAssignedElements } from "lit/decorators.js";
-import { SegmentedButton } from "../segmented-button/segmented-button.js";
+import { LitElement, html, nothing } from 'lit';
+import { property, queryAssignedElements } from 'lit/decorators.js';
+import { SegmentedButton } from '../segmented-button/segmented-button.js';
 
 export class SegmentedButtonGroup extends LitElement {
-  @property({ reflect: true }) size: "sm" | "md" = "md";
+  @property({ reflect: true }) size: 'sm' | 'md' = 'md';
 
   @queryAssignedElements() private buttons!: SegmentedButton[];
 
   connectedCallback() {
     super.connectedCallback();
     this.addEventListener(
-      "segmented-button-click",
+      'segmented-button-click',
       this.handleSegmentedButtonClick
     );
   }
@@ -42,7 +42,7 @@ export class SegmentedButtonGroup extends LitElement {
     });
 
     this.dispatchEvent(
-      new CustomEvent("segmented-button-group-change", {
+      new CustomEvent('segmented-button-group-change', {
         detail: {
           selected: clicked,
           index,

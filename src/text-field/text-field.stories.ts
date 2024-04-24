@@ -1,9 +1,9 @@
-import { html, TemplateResult } from "lit";
-import "./text-field.js";
+import { html, TemplateResult } from 'lit';
+import './text-field.js';
 
 export default {
-  title: "TextField",
-  component: "tap-text-field",
+  title: 'TextField',
+  component: 'tap-text-field',
   argTypes: {},
 };
 
@@ -15,7 +15,7 @@ interface Story<T> {
 
 interface ArgTypes {}
 
-const Template: Story<ArgTypes> = ({}: ArgTypes) => html`
+const Template: Story<ArgTypes> = () => html`
   <tap-text-field label="لیبل" caption="متن ساپورت" placeholder="مقدار">
   </tap-text-field>
 `;

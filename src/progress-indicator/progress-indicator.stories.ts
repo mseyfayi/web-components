@@ -1,9 +1,9 @@
-import { html, TemplateResult } from "lit";
-import "./index.js";
+import { html, TemplateResult } from 'lit';
+import './index.js';
 
 export default {
-  title: "Progress Indicator",
-  component: "tap-progress-indicator",
+  title: 'Progress Indicator',
+  component: 'tap-progress-indicator',
   argTypes: {},
 };
 

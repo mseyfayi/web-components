@@ -1,4 +1,4 @@
-import { css } from "lit";
+import { css } from 'lit';
 
 export default css`
   .wrapper {
@@ -23,12 +23,13 @@ export default css`
     margin: var(--tap-sys-spacing-2);
   }
 
-  :host([type="pill"]) .badge, :host([type="numeral"]) .badge {
+  :host([type='pill']) .badge,
+  :host([type='numeral']) .badge {
     border-radius: var(--tap-sys-radius-4);
     padding: var(--tap-sys-spacing-2) var(--tap-sys-spacing-4);
   }
 
-  :host([type="dot"]) .badge {
+  :host([type='dot']) .badge {
     /* FIXME: we dont have sizing tokens yet  */
     width: 6px;
     height: 6px;
@@ -37,84 +38,84 @@ export default css`
     transform: translate(0, 0);
   }
 
-  :host([variant="info"]) .badge {
+  :host([variant='info']) .badge {
     background-color: var(--tap-sys-color-surface-accent);
     color: var(--tap-sys-color-content-on-negative);
   }
 
-  :host([variant="success"]) .badge {
+  :host([variant='success']) .badge {
     background-color: var(--tap-sys-color-surface-positive);
     color: var(--tap-sys-color-content-on-negative);
   }
 
-  :host([variant="error"]) .badge {
+  :host([variant='error']) .badge {
     background-color: var(--tap-sys-color-surface-negative);
     color: var(--tap-sys-color-content-on-negative);
   }
 
-  :host([variant="warning"]) .badge {
+  :host([variant='warning']) .badge {
     background-color: var(--tap-sys-color-surface-warning);
     color: var(--tap-sys-color-content-on-warning);
   }
 
-  :host([variant="inverse"]) .badge {
+  :host([variant='inverse']) .badge {
     background-color: var(--tap-sys-color-surface-disabled);
     color: var(--tap-sys-color-content-tertiary);
   }
 
-  :host([variant="info"][priority="low"]) .badge {
+  :host([variant='info'][priority='low']) .badge {
     background-color: var(--tap-sys-color-surface-accent-light);
     color: var(--tap-sys-color-content-accent);
   }
 
-  :host([variant="success"][priority="low"]) .badge {
+  :host([variant='success'][priority='low']) .badge {
     background-color: var(--tap-sys-color-surface-positive-light);
     color: var(--tap-sys-color-content-positive);
   }
 
-  :host([variant="error"][priority="low"]) .badge {
+  :host([variant='error'][priority='low']) .badge {
     background-color: var(--tap-sys-color-surface-negative-light);
     color: var(--tap-sys-color-content-negative);
   }
 
-  :host([variant="warning"][priority="low"]) .badge {
+  :host([variant='warning'][priority='low']) .badge {
     background-color: var(--tap-sys-color-surface-warning-light);
     color: var(--tap-sys-color-content-warning);
   }
 
-  :host([variant="info"]) .icon path {
+  :host([variant='info']) .icon path {
     fill: var(--tap-sys-color-content-on-negative);
   }
 
-  :host([variant="success"]) .icon path {
+  :host([variant='success']) .icon path {
     fill: var(--tap-sys-color-content-on-negative);
   }
 
-  :host([variant="error"]) .icon path {
+  :host([variant='error']) .icon path {
     fill: var(--tap-sys-color-content-on-negative);
   }
 
-  :host([variant="warning"]) .icon path {
+  :host([variant='warning']) .icon path {
     fill: var(--tap-sys-color-content-on-warning);
   }
 
-  :host([variant="inverse"]) .icon path {
+  :host([variant='inverse']) .icon path {
     fill: var(--tap-sys-color-content-tertiary);
   }
 
-  :host([variant="info"][priority="low"]) .icon path {
+  :host([variant='info'][priority='low']) .icon path {
     fill: var(--tap-sys-color-content-accent);
   }
 
-  :host([variant="success"][priority="low"]) .icon path {
+  :host([variant='success'][priority='low']) .icon path {
     fill: var(--tap-sys-color-content-positive);
   }
 
-  :host([variant="error"][priority="low"]) .icon path {
+  :host([variant='error'][priority='low']) .icon path {
     fill: var(--tap-sys-color-content-negative);
   }
 
-  :host([variant="warning"][priority="low"]) .icon path {
+  :host([variant='warning'][priority='low']) .icon path {
     fill: var(--tap-sys-color-content-warning);
   }
 `;

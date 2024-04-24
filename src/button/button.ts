@@ -1,6 +1,6 @@
-import { LitElement, html, nothing } from "lit";
-import { property } from "lit/decorators.js";
-import { ifDefined } from "lit/directives/if-defined.js";
+import { LitElement, html, nothing } from 'lit';
+import { property } from 'lit/decorators.js';
+import { ifDefined } from 'lit/directives/if-defined.js';
 
 export class Button extends LitElement {
   static readonly shadowRootOptions = {
@@ -14,7 +14,7 @@ export class Button extends LitElement {
 
   @property({ type: Boolean, reflect: true }) disabled = false;
 
-  @property({ reflect: true }) type?: "button" | "submit" | "reset";
+  @property({ reflect: true }) type?: 'button' | 'submit' | 'reset';
 
   @property() value?: string;
 
@@ -24,15 +24,15 @@ export class Button extends LitElement {
 
   @property({ type: Boolean, reflect: true }) loading = false;
 
-  @property({ reflect: true }) size: "small" | "medium" | "large" = "medium";
+  @property({ reflect: true }) size: 'small' | 'medium' | 'large' = 'medium';
 
   @property({ reflect: true }) variant:
-    | "primary"
-    | "ghost"
-    | "naked"
-    | "elevated"
-    | "destructive"
-    | "brand" = "primary";
+    | 'primary'
+    | 'ghost'
+    | 'naked'
+    | 'elevated'
+    | 'destructive'
+    | 'brand' = 'primary';
 
   constructor() {
     super();
@@ -40,11 +40,11 @@ export class Button extends LitElement {
   }
 
   private handleClick() {
-    if (this.type === "reset") {
+    if (this.type === 'reset') {
       return this.internals.form?.reset();
     }
 
-    if (this.type === "submit") {
+    if (this.type === 'submit') {
       return this.internals.form?.requestSubmit();
     }
   }

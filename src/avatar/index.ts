@@ -1,14 +1,14 @@
-import { customElement } from "lit/decorators.js";
-import { Avatar } from "./avatar.js";
-import styles from "./avatar.style.js";
+import { customElement } from 'lit/decorators.js';
+import { Avatar } from './avatar.js';
+import styles from './avatar.style.js';
 
-@customElement("tap-avatar")
+@customElement('tap-avatar')
 export class TapAvatar extends Avatar {
   static readonly styles = [styles];
 }
 
 declare global {
   interface HTMLElementTagNameMap {
-    "tap-avatar": TapAvatar;
+    'tap-avatar': TapAvatar;
   }
 }

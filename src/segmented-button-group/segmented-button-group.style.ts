@@ -1,4 +1,4 @@
-import { css } from "lit";
+import { css } from 'lit';
 
 export default css`
   :host {
@@ -22,11 +22,11 @@ export default css`
     padding: var(--tap-sys-spacing-3);
   }
 
-  :host([size="sm"]) .button-group {
+  :host([size='sm']) .button-group {
     height: var(--tap-sys-spacing-10);
   }
 
-  :host([size="md"]) .button-group {
+  :host([size='md']) .button-group {
     height: var(--tap-sys-spacing-11);
   }
 `;

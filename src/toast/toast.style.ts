@@ -1,4 +1,4 @@
-import { css } from "lit";
+import { css } from 'lit';
 
 export default css`
   :host {
@@ -58,23 +58,23 @@ export default css`
     }
   }
 
-  :host([variant="success"]) .toast {
+  :host([variant='success']) .toast {
     background-color: var(--tap-sys-color-surface-positive);
     color: var(--tap-sys-color-content-on-inverse);
   }
-  :host([variant="error"]) .toast {
+  :host([variant='error']) .toast {
     background-color: var(--tap-sys-color-surface-negative);
     color: var(--tap-sys-color-content-on-inverse);
   }
-  :host([variant="info"]) .toast {
+  :host([variant='info']) .toast {
     background-color: var(--tap-sys-color-surface-accent);
     color: var(--tap-sys-color-content-on-inverse);
   }
-  :host([variant="inverse"]) .toast {
+  :host([variant='inverse']) .toast {
     background-color: var(--tap-sys-color-surface-inverse-secondary);
     color: var(--tap-sys-color-content-on-inverse);
   }
-  :host([variant="warning"]) .toast {
+  :host([variant='warning']) .toast {
     background-color: var(--tap-sys-color-surface-warning);
     color: var(--tap-sys-color-content-primary);
   }
@@ -105,4 +105,3 @@ export default css`
     gap: inherit;
   }
 `;
-
