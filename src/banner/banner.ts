@@ -16,7 +16,7 @@ export class Banner extends LitElement {
     if (changed.has('backgroundColor') && !!this.backgroundColor) {
       this.style.setProperty(
         '--tap-banner-color-surface',
-        this.backgroundColor
+        this.backgroundColor,
       );
     }
 

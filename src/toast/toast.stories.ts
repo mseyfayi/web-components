@@ -70,7 +70,7 @@ const Template: Story<ArgTypes> = ({
 const VariantTemplate: Story<unknown> = () => {
   return html`
     ${toastVariants.map(
-      (variant) => html` <tap-toast variant=${variant}>${variant}</tap-toast> `
+      (variant) => html`<tap-toast variant=${variant}>${variant}</tap-toast>`,
     )}
   `;
 };

@@ -9,7 +9,7 @@ export class BottomNavigationItem extends LitElement {
       new Event('bottom-navigation-item-click', {
         bubbles: true,
         composed: true,
-      })
+      }),
     );
   };
 

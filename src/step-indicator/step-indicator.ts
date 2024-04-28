@@ -28,7 +28,7 @@ export class StepIndicator extends LitElement {
         detail: { current: this.normalizedCurrent },
         bubbles: true,
         composed: true,
-      })
+      }),
     );
   }
 
@@ -46,7 +46,7 @@ export class StepIndicator extends LitElement {
                 ? 'step'
                 : 'false'}
               @click="${() => this.handleClick(index)}"
-            ></button>`
+            ></button>`,
         )}
       </div>
     `;

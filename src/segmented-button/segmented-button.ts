@@ -10,7 +10,7 @@ export class SegmentedButton extends LitElement {
       new Event('segmented-button-click', {
         bubbles: true,
         composed: true,
-      })
+      }),
     );
   };
 

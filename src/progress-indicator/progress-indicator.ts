@@ -38,7 +38,7 @@ export class ProgressIndicator extends LitElement {
                 active: index < this.current,
               })}
               part="step"
-            ></div>`
+            ></div>`,
         )}
       </div>
     `;

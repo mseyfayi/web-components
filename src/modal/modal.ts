@@ -45,7 +45,7 @@ export class Modal extends LitElement implements HTMLDialogElement {
             bubbles: true,
             composed: true,
             cancelable: true,
-          })
+          }),
         );
       } else {
         this.dispatchEvent(
@@ -53,7 +53,7 @@ export class Modal extends LitElement implements HTMLDialogElement {
             bubbles: true,
             composed: true,
             cancelable: true,
-          })
+          }),
         );
       }
     }

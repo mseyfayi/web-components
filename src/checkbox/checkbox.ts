@@ -61,8 +61,8 @@ export class Checkbox extends LitElement {
         aria-checked=${this.indeterminate
           ? 'mixed'
           : this.checked
-          ? 'true'
-          : 'false'}
+            ? 'true'
+            : 'false'}
         aria-label=${nothing}
         aria-describedby=${nothing}
         ?disabled=${this.disabled}

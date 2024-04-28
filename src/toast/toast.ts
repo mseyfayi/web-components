@@ -136,7 +136,7 @@ export class Toast extends LitElement {
       new CustomEvent('dismiss', {
         bubbles: true,
         composed: true,
-      })
+      }),
     );
   };
 

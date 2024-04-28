@@ -11,7 +11,7 @@ export class SegmentedButtonGroup extends LitElement {
     super.connectedCallback();
     this.addEventListener(
       'segmented-button-click',
-      this.handleSegmentedButtonClick
+      this.handleSegmentedButtonClick,
     );
   }
 
@@ -49,7 +49,7 @@ export class SegmentedButtonGroup extends LitElement {
         },
         bubbles: true,
         composed: true,
-      })
+      }),
     );
   };
 

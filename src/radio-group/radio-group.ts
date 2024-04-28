@@ -17,7 +17,7 @@ export class RadioGroup extends LitElement {
   private selectDefaultOption = () => {
     if (!this.value) return;
     const selectedRadio = this.radios.find(
-      (radio) => radio.value == this.value
+      (radio) => radio.value == this.value,
     );
     if (!selectedRadio) return;
     selectedRadio.checked = true;
@@ -46,7 +46,7 @@ export class RadioGroup extends LitElement {
         },
         bubbles: true,
         composed: true,
-      })
+      }),
     );
   };
 

@@ -37,7 +37,7 @@ export class Radio extends LitElement {
         },
         bubbles: true,
         composed: true,
-      })
+      }),
     );
   };
 

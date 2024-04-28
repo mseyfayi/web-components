@@ -9,7 +9,7 @@ export class BottomNavigation extends LitElement {
     super.connectedCallback();
     this.addEventListener(
       'bottom-navigation-item-click',
-      this.handleBottomNavigationItemClick
+      this.handleBottomNavigationItemClick,
     );
   }
 
